@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI案例汇 - 发布案例</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+        }
+        .required::after {
+            content: '*';
+            color: #EF4444;
+            margin-left: 4px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-xl font-bold text-blue-600">AI案例汇</h1>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="home.html" class="text-gray-600 hover:text-blue-600"><i class="fas fa-home mr-1"></i> 首页</a>
+                    <a href="category.html" class="text-gray-600 hover:text-blue-600"><i class="fas fa-th-large mr-1"></i> 分类</a>
+                    <a href="publish.html" class="text-blue-600 font-medium"><i class="fas fa-plus-circle mr-1"></i> 发布</a>
+                    <a href="profile.html" class="text-gray-600 hover:text-blue-600"><i class="fas fa-user mr-1"></i> 我的</a>
+                </div>
+                <div class="flex items-center">
+                    <div class="relative">
+                        <input type="text" placeholder="搜索AI产品或案例" class="bg-gray-100 rounded-full py-2 px-4 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500 w-64">
+                        <button class="absolute right-3 top-2 text-gray-500">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <a href="login.html" class="ml-4 text-gray-600 hover:text-blue-600">登录</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容区 -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-2xl font-bold mb-6">发布AI产品使用案例</h1>
+            
+            <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-info-circle text-blue-500"></i>
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-blue-700">分享您的AI产品使用心得，帮助更多人了解和应用AI技术。优质案例有机会被平台推荐，获得更多曝光。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form>
+                    <!-- 基本信息 -->
+                    <div class="mb-8">
+                        <h2 class="text-lg font-medium mb-4 pb-2 border-b">基本信息</h2>
+                        
+                        <div class="mb-5">
+                            <label for="title" class="block text-gray-700 font-medium mb-2 required">案例标题</label>
+                            <input type="text" id="title" name="title" placeholder="请输入有吸引力的标题，简明扼要地描述您的案例" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <p class="text-gray-500 text-sm mt-1">建议25-50个字，不超过60个字</p>
+                        </div>
+                        
+                        <div class="mb-5">
+                            <label class="block text-gray-700 font-medium mb-2 required">案例封面</label>
+                            <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
+                                <div class="space-y-2">
+                                    <i class="fas fa-cloud-upload-alt text-gray-400 text-3xl"></i>
+                                    <p class="text-gray-500">点击或拖拽上传封面图片</p>
+                                    <p class="text-gray-400 text-sm">支持 JPG、PNG 格式，建议尺寸 1200×600px，不超过2MB</p>
+                                </div>
+                                <input type="file" class="hidden" accept="image/*">
+                                <button type="button" class="mt-4 px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg text-gray-700 text-sm">选择文件</button>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label for="ai_product" class="block text-gray-700 font-medium mb-2 required">所用AI产品</label>
+                                <div class="relative">
+                                    <select id="ai_product" name="ai_product" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none">
+                                        <option value="" disabled selected>请选择AI产品</option>
+                                        <option value="chatgpt">ChatGPT</option>
+                                        <option value="claude">Claude</option>
+                                        <option value="midjourney">Midjourney</option>
+                                        <option value="dall-e">DALL-E</option>
+                                        <option value="copilot">GitHub Copilot</option>
+                                        <option value="notion_ai">Notion AI</option>
+                                        <option value="jasper">Jasper AI</option>
+                                        <option value="other">其他</option>
+                                    </select>
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="category" class="block text-gray-700 font-medium mb-2 required">所属分类</label>
+                                <div class="relative">
+                                    <select id="category" name="category" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none">
+                                        <option value="" disabled selected>请选择分类</option>
+                                        <option value="chatbot">AI聊天机器人</option>
+                                        <option value="image">AI图像生成</option>
+                                        <option value="code">AI编程助手</option>
+                                        <option value="writing">AI写作工具</option>
+                                        <option value="voice">AI语音助手</option>
+                                        <option value="data">AI数据分析</option>
+                                        <option value="translate">AI翻译工具</option>
+                                        <option value="other">其他</option>
+                                    </select>
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 案例内容 -->
+                    <div class="mb-8">
+                        <h2 class="text-lg font-medium mb-4 pb-2 border-b">案例内容</h2>
+                        
+                        <div class="mb-5">
+                            <label for="summary" class="block text-gray-700 font-medium mb-2 required">案例简介</label>
+                            <textarea id="summary" name="summary" rows="3" placeholder="请简要概述您的使用案例，包括背景、目标和主要成果" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
+                            <p class="text-gray-500 text-sm mt-1">建议50-200个字，这将显示在列表页面</p>
+                        </div>
+                        
+                        <div class="mb-5">
+                            <label class="block text-gray-700 font-medium mb-2 required">详细内容</label>
+                            
+                            <!-- 编辑器工具栏 -->
+                            <div class="border border-gray-300 border-b-0 rounded-t-lg bg-gray-50 px-3 py-2 flex flex-wrap items-center gap-1">
+                                <button type="button" class="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded">
+                                    <i class="fas fa-heading"></i>
+                                </button>
+                                <button type="button" class="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded">
+                                    <i class="fas fa-bold"></i>
+                                </button>
+                                <button type="button" class="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded">
+                                    <i class="fas fa-italic"></i>
+                                </button>
+                                <button type="button" class="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded">
+                                    <i class="fas fa-underline"></i>
+                                </button>
+                                <span class="border-r border-gray-300 h-6 mx-1"></span>
+                                <button type="button" class="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded">
+                                    <i class="fas fa-list-ul"></i>
+                                </button>
+                                <button type="button" class="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded">
+                                    <i class="fas fa-list-ol"></i>
+                                </button>
+                                <span class="border-r border-gray-300 h-6 mx-1"></span>
+                                <button type="button" class="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded">
+                                    <i class="fas fa-link"></i>
+                                </button>
+                                <button type="button" class="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded">
+                                    <i class="fas fa-image"></i>
+                                </button>
+                                <button type="button" class="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded">
+                                    <i class="fas fa-code"></i>
+                                </button>
+                                <button type="button" class="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded">
+                                    <i class="fas fa-quote-right"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- 编辑器内容区 -->
+                            <textarea id="content" name="content" rows="15" placeholder="详细描述您的AI产品使用案例，建议包含以下内容：
+1. 使用背景和目标
+2. 具体使用方法和步骤
+3. 使用效果和成果
+4. 经验和技巧分享
+5. 遇到的问题和解决方案" class="w-full border border-gray-300 rounded-b-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            
+                            <p class="text-gray-500 text-sm mt-1">支持Markdown格式，建议配图说明以增强可读性</p>
+                        </div>
+                        
+                        <div class="mb-5">
+                            <label for="tags" class="block text-gray-700 font-medium mb-2">案例标签</label>
+                            <input type="text" id="tags" name="tags" placeholder="输入标签，用逗号分隔，如：效率提升,工作流优化,内容创作" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <p class="text-gray-500 text-sm mt-1">最多添加5个标签，每个标签不超过10个字</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 附加信息 -->
+                    <div class="mb-8">
+                        <h2 class="text-lg font-medium mb-4 pb-2 border-b">附加信息</h2>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label for="problem_solved" class="block text-gray-700 font-medium mb-2">解决的问题</label>
+                                <input type="text" id="problem_solved" name="problem_solved" placeholder="这个AI产品帮您解决了什么问题？" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            
+                            <div>
+                                <label for="target_users" class="block text-gray-700 font-medium mb-2">适用人群</label>
+                                <input type="text" id="target_users" name="target_users" placeholder="哪类人群适合使用此案例？" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 提交部分 -->
+                    <div class="flex flex-col md:flex-row items-center justify-between border-t pt-6">
+                        <div class="flex items-center mb-4 md:mb-0">
+                            <input type="checkbox" id="agree" name="agree" class="rounded text-blue-600 focus:ring-blue-500 h-4 w-4">
+                            <label for="agree" class="ml-2 text-gray-700 text-sm">
+                                我已阅读并同意<a href="#" class="text-blue-600 hover:underline">《内容发布规则》</a>和<a href="#" class="text-blue-600 hover:underline">《用户协议》</a>
+                            </label>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button type="button" class="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">保存草稿</button>
+                            <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">发布案例</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- 温馨提示 -->
+            <div class="bg-white rounded-lg shadow-sm p-6">
+                <h3 class="font-medium text-lg mb-3">温馨提示</h3>
+                <ul class="text-gray-600 space-y-2 list-disc list-inside">
+                    <li>请确保您分享的内容是原创的，或已获得授权的案例。</li>
+                    <li>内容发布后，平台将进行审核，审核通过后才会公开展示。</li>
+                    <li>优质案例有机会被收录到精选案例，获得更多曝光。</li>
+                    <li>请勿发布包含敏感、违规内容的案例，一经发现将被删除。</li>
+                    <li>如有问题，请联系 <a href="mailto:support@aicasehub.com" class="text-blue-600 hover:underline">support@aicasehub.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-10 mt-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h2 class="text-xl font-bold mb-4">AI案例汇</h2>
+                    <p class="text-gray-400">发现、分享和讨论AI产品的最佳使用案例，连接AI爱好者与专业人士的社区。</p>
+                </div>
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h3 class="font-bold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="home.html" class="text-gray-400 hover:text-white">首页</a></li>
+                        <li><a href="category.html" class="text-gray-400 hover:text-white">案例分类</a></li>
+                        <li><a href="publish.html" class="text-gray-400 hover:text-white">发布案例</a></li>
+                        <li><a href="profile.html" class="text-gray-400 hover:text-white">个人中心</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h3 class="font-bold mb-4">关于我们</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">关于平台</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">使用条款</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">隐私政策</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4">
+                    <h3 class="font-bold mb-4">关注我们</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-weixin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-weibo"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-400">订阅获取最新AI案例和动态</p>
+                        <div class="flex mt-2">
+                            <input type="email" placeholder="请输入您的邮箱" class="px-3 py-2 bg-gray-700 text-white rounded-l focus:outline-none w-full">
+                            <button class="bg-blue-600 px-4 py-2 rounded-r hover:bg-blue-700">订阅</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>© 2023 AI案例汇. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

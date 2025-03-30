@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI案例汇 - 案例详情</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+        }
+        .content h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .content p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+        .content ul, .content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .content ul li {
+            list-style-type: disc;
+            margin-bottom: 0.5rem;
+        }
+        .content ol li {
+            list-style-type: decimal;
+            margin-bottom: 0.5rem;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            margin: 1.5rem 0;
+        }
+        .content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            color: #6b7280;
+            margin: 1.5rem 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-xl font-bold text-blue-600">AI案例汇</h1>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="home.html" class="text-gray-600 hover:text-blue-600"><i class="fas fa-home mr-1"></i> 首页</a>
+                    <a href="category.html" class="text-gray-600 hover:text-blue-600"><i class="fas fa-th-large mr-1"></i> 分类</a>
+                    <a href="publish.html" class="text-gray-600 hover:text-blue-600"><i class="fas fa-plus-circle mr-1"></i> 发布</a>
+                    <a href="profile.html" class="text-gray-600 hover:text-blue-600"><i class="fas fa-user mr-1"></i> 我的
+                        <a href="profile.html" class="text-gray-600 hover:text-blue-600"><i class="fas fa-user mr-1"></i> 我的</a>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="relative">
+                            <input type="text" placeholder="搜索AI产品或案例" class="bg-gray-100 rounded-full py-2 px-4 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500 w-64">
+                            <button class="absolute right-3 top-2 text-gray-500">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        <a href="login.html" class="ml-4 text-gray-600 hover:text-blue-600">登录</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- 面包屑导航 -->
+        <div class="bg-white border-b">
+            <div class="container mx-auto px-4 py-3">
+                <div class="flex items-center text-sm">
+                    <a href="home.html" class="text-gray-500 hover:text-blue-600">首页</a>
+                    <span class="mx-2 text-gray-400">/</span>
+                    <a href="category.html" class="text-gray-500 hover:text-blue-600">AI聊天机器人</a>
+                    <span class="mx-2 text-gray-400">/</span>
+                    <span class="text-gray-700">如何使用ChatGPT提升内容创作效率</span>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 主要内容区 -->
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex flex-col lg:flex-row">
+                <!-- 左侧主要内容 -->
+                <div class="lg:w-2/3 lg:pr-8">
+                    <!-- 文章标题和基本信息 -->
+                    <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+                        <h1 class="text-2xl font-bold mb-4">如何使用ChatGPT提升内容创作效率</h1>
+                        <div class="flex flex-wrap items-center mb-6">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mr-3">AI聊天机器人</span>
+                            <span class="text-gray-500 text-sm mr-4"><i class="far fa-calendar-alt mr-1"></i> 2023-10-15</span>
+                            <span class="text-gray-500 text-sm mr-4"><i class="far fa-eye mr-1"></i> 1,246 浏览</span>
+                            <span class="text-gray-500 text-sm mr-4"><i class="far fa-thumbs-up mr-1"></i> 89 点赞</span>
+                            <span class="text-gray-500 text-sm"><i class="far fa-comment mr-1"></i> 16 评论</span>
+                        </div>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/40x40/ccd/fff?text=U" alt="用户头像" class="w-10 h-10 rounded-full">
+                            <div class="ml-3">
+                                <p class="font-medium">张文思</p>
+                                <p class="text-gray-500 text-sm">内容创作者 · 关注 245</p>
+                            </div>
+                            <button class="ml-auto bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm">
+                                <i class="fas fa-plus mr-1"></i> 关注
+                            </button>
+                        </div>
+                    </div>
+    
+                    <!-- 文章封面图 -->
+                    <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+                        <img src="https://placehold.co/1200x600/eef/fff?text=ChatGPT使用案例" alt="案例封面图" class="w-full h-auto rounded-lg">
+                    </div>
+    
+                    <!-- 文章内容 -->
+                    <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+                        <div class="content text-gray-800">
+                            <h2>一、引言</h2>
+                            <p>作为一名内容创作者，我曾经经常为了寻找灵感、进行内容编辑和优化而耗费大量时间。自从开始使用ChatGPT，我的内容创作效率提高了至少30%，而且内容质量也有所提升。在这篇案例分享中，我将详细介绍我是如何将ChatGPT整合到我的内容创作工作流程中的。</p>
+                            
+                            <h2>二、案例背景</h2>
+                            <p>作为自由撰稿人，我每周需要为多个客户创建各种类型的内容，包括博客文章、社交媒体帖子和电子邮件营销文案。在使用ChatGPT之前，我通常每天需要8-10小时才能完成所有工作，且经常感到创意枯竭。</p>
+                            
+                            <h2>三、ChatGPT应用场景</h2>
+                            
+                            <h3>3.1 头脑风暴和创意生成</h3>
+                            <p>我使用ChatGPT进行主题头脑风暴和创意生成，特别是在面对陌生领域或创意瓶颈时。例如，当需要为一个健康科技公司撰写博客系列时，我会向ChatGPT提问：</p>
+                            <blockquote>"为一家专注于老年人健康监测的科技公司提供10个博客主题创意，内容应该既能展示产品价值，又能提供实用的健康建议。"</blockquote>
+                            <p>ChatGPT会提供一系列创意，我可以从中选择最适合的，并根据自己的专业知识进行调整。</p>
+                            
+                            <img src="https://placehold.co/800x400/eef/fff?text=ChatGPT头脑风暴示例" alt="ChatGPT头脑风暴示例">
+                            
+                            <h3>3.2 内容结构优化</h3>
+                            <p>有了主题后，我会让ChatGPT帮助我创建内容大纲。例如：</p>
+                            <blockquote>"为博客文章'如何利用可穿戴设备监测老年人健康状况'创建一个详细的内容大纲。"</blockquote>
+                            <p>这样可以确保我的内容结构完整，涵盖所有重要方面，并且逻辑流畅。</p>
+                            
+                            <h3>3.3 文案润色与优化</h3>
+                            <p>我经常使用ChatGPT来润色我的草稿。我会将初稿粘贴给ChatGPT，并要求：</p>
+                            <blockquote>"帮我润色以下内容，使其更加生动有趣，同时保持专业性和权威性。"</blockquote>
+                            <p>ChatGPT会提供改进建议，包括更生动的表达方式、更清晰的解释和更吸引人的过渡。</p>
+                            
+                            <h3>3.4 多语言本地化</h3>
+                            <p>对于需要多语言发布的内容，我使用ChatGPT进行初步翻译和本地化。特别是在处理专业术语时，ChatGPT能够提供准确的翻译并且根据目标文化进行适当调整。</p>
+                            
+                            <h2>四、实施效果</h2>
+                            <ul>
+                                <li><strong>时间效率提升：</strong> 我的内容创作时间减少了约30%，从每天8-10小时减少到5-7小时。</li>
+                                <li><strong>内容质量提升：</strong> 客户反馈指出，内容的逻辑性和可读性都有所提高。</li>
+                                <li><strong>创意多样性：</strong> 借助ChatGPT的创意建议，我的内容主题更加多样化。</li>
+                                <li><strong>工作满意度提升：</strong> 减少了创意枯竭的压力，使我能够更专注于创作过程中更有价值的部分。</li>
+                            </ul>
+                            
+                            <img src="https://placehold.co/800x400/eef/fff?text=效率对比图表" alt="效率对比图表">
+                            
+                            <h2>五、使用技巧与最佳实践</h2>
+                            <ol>
+                                <li><strong>明确提示词：</strong> 向ChatGPT提供具体的指导，包括目标受众、内容风格和具体需求。</li>
+                                <li><strong>批判性筛选：</strong> 不要照搬ChatGPT的建议，而是根据自己的专业知识进行筛选和调整。</li>
+                                <li><strong>迭代优化：</strong> 将ChatGPT视为协作者，通过多轮对话不断优化内容。</li>
+                                <li><strong>保持人的创意主导：</strong> 使用ChatGPT辅助创作，但保持自己的创意视角和专业判断。</li>
+                                <li><strong>事实核查：</strong> 始终验证ChatGPT提供的信息，尤其是统计数据和专业知识。</li>
+                            </ol>
+                            
+                            <h2>六、挑战与解决方案</h2>
+                            <p>在使用过程中，我也遇到了一些挑战：</p>
+                            <ul>
+                                <li><strong>事实准确性：</strong> ChatGPT有时会生成不准确的信息。解决方案是总是进行事实核查，并提供参考资料让ChatGPT基于这些资料创作。</li>
+                                <li><strong>风格一致性：</strong> 维持一致的品牌声音有时很困难。我创建了一个"风格指南"提示词，确保ChatGPT生成的内容符合特定品牌风格。</li>
+                                <li><strong>过度依赖：</strong> 为避免过度依赖，我设定了明确的任务界限，保留最终创意决策权。</li>
+                            </ul>
+                            
+                            <h2>七、总结与未来展望</h2>
+                            <p>ChatGPT已经成为我内容创作工作流程中不可或缺的工具。它不仅提高了我的工作效率，还帮助我突破创意瓶颈，提供了新的视角。</p>
+                            <p>展望未来，我计划进一步探索如何将ChatGPT与其他创作工具结合，构建更加高效的内容创作生态系统。我相信，随着AI技术的不断进步，内容创作的可能性将被进一步扩展。</p>
+                            <p>如果你是内容创作者，我强烈建议你尝试将ChatGPT整合到你的工作流程中。从简单的任务开始，逐步探索它如何最好地为你的特定需求服务。</p>
+                        </div>
+                    </div>
+    
+                    <!-- 标签 -->
+                    <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+                        <h3 class="font-bold mb-3">相关标签</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">#ChatGPT</a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">#Midjourney</a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">#DALL-E</a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">#GitHub Copilot</a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">#AI写作</a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">#内容创作</a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">#效率提升</a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">#AI图像生成</a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">#AI编程</a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">#AI翻译</a>
+                        </div>
+                    </div>
+    
+                    <!-- 作者信息 -->
+                    <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/80x80/ccd/fff?text=U" alt="作者头像" class="w-16 h-16 rounded-full">
+                            <div class="ml-4">
+                                <h3 class="font-bold text-lg">张文思</h3>
+                                <p class="text-gray-600 mb-2">内容创作者 | 自由撰稿人 | AI探索者</p>
+                                <p class="text-gray-500 text-sm">已发布案例: 12 | 关注者: 245</p>
+                            </div>
+                            <button class="ml-auto bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full">
+                                <i class="fas fa-plus mr-1"></i> 关注
+                            </button>
+                        </div>
+                        <p class="mt-4 text-gray-600">专注于探索AI工具在内容创作和数字营销领域的应用，帮助创作者和营销人员提升工作效率和创作质量。</p>
+                    </div>
+    
+                    <!-- 评论区 -->
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <h3 class="font-bold text-lg mb-6">评论 (16)</h3>
+                        
+                        <!-- 评论输入框 -->
+                        <div class="flex mb-6">
+                            <img src="https://placehold.co/40x40/dce/fff?text=Me" alt="用户头像" class="w-10 h-10 rounded-full">
+                            <div class="ml-3 flex-1">
+                                <textarea placeholder="分享你的想法..." class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none" rows="3"></textarea>
+                                <div class="flex justify-end mt-2">
+                                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm">发表评论</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 评论列表 -->
+                        <div class="space-y-6">
+                            <!-- 评论1 -->
+                            <div class="flex">
+                                <img src="https://placehold.co/40x40/fdc/fff?text=L" alt="评论用户头像" class="w-10 h-10 rounded-full">
+                                <div class="ml-3 flex-1">
+                                    <div class="flex justify-between">
+                                        <div>
+                                            <h4 class="font-medium">李明</h4>
+                                            <p class="text-gray-500 text-sm">2023-10-15 16:42</p>
+                                        </div>
+                                        <button class="text-gray-400 hover:text-gray-600">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                    </div>
+                                    <p class="mt-2 text-gray-700">非常实用的案例分享！我一直在寻找提高内容创作效率的方法，你提到的ChatGPT应用场景给了我很多启发。特别是多语言本地化这部分，之前没想到可以这样用。请问你在使用过程中，是否还有一些更高级的提示词技巧可以分享？</p>
+                                    <div class="flex items-center mt-2 space-x-4">
+                                        <button class="text-gray-500 hover:text-blue-600 text-sm flex items-center">
+                                            <i class="far fa-thumbs-up mr-1"></i> 点赞(12)
+                                        </button>
+                                        <button class="text-gray-500 hover:text-blue-600 text-sm flex items-center">
+                                            <i class="far fa-comment mr-1"></i> 回复
+                                        </button>
+                                    </div>
+                                    
+                                    <!-- 回复 -->
+                                    <div class="ml-6 mt-3 border-l-2 border-gray-200 pl-3">
+                                        <div class="flex">
+                                            <img src="https://placehold.co/40x40/ccd/fff?text=U" alt="作者头像" class="w-8 h-8 rounded-full">
+                                            <div class="ml-2 flex-1">
+                                                <div class="flex justify-between">
+                                                    <div>
+                                                        <h4 class="font-medium text-sm">张文思<span class="text-blue-600 text-xs ml-1">作者</span></h4>
+                                                        <p class="text-gray-500 text-xs">2023-10-15 17:15</p>
+                                                    </div>
+                                                </div>
+                                                <p class="mt-1 text-gray-700 text-sm">谢谢你的反馈！关于高级提示词技巧，我发现使用"角色扮演"非常有效，比如让ChatGPT扮演特定领域的专家。例如，当我需要写医疗相关内容时，我会说"请你扮演一位有10年经验的医学科普作家，用通俗易懂的语言解释XX疾病的预防方法"。这样生成的内容会更加专业且易于理解。</p>
+                                                <div class="flex items-center mt-1 space-x-4">
+                                                    <button class="text-gray-500 hover:text-blue-600 text-xs flex items-center">
+                                                        <i class="far fa-thumbs-up mr-1"></i> 点赞(5)
+                                                    </button>
+                                                    <button class="text-gray-500 hover:text-blue-600 text-xs flex items-center">
+                                                        <i class="far fa-comment mr-1"></i> 回复
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 评论2 -->
+                            <div class="flex">
+                                <img src="https://placehold.co/40x40/cdf/fff?text=W" alt="评论用户头像" class="w-10 h-10 rounded-full">
+                                <div class="ml-3 flex-1">
+                                    <div class="flex justify-between">
+                                        <div>
+                                            <h4 class="font-medium">王程序</h4>
+                                            <p class="text-gray-500 text-sm">2023-10-15 14:20</p>
+                                        </div>
+                                        <button class="text-gray-400 hover:text-gray-600">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                    </div>
+                                    <p class="mt-2 text-gray-700">作为技术博客作者，我也尝试用ChatGPT辅助写作，确实能提高效率。不过我发现在技术内容方面，ChatGPT有时会生成看似合理但实际不准确的代码或技术解释。你是如何处理这类问题的？</p>
+                                    <div class="flex items-center mt-2 space-x-4">
+                                        <button class="text-gray-500 hover:text-blue-600 text-sm flex items-center">
+                                            <i class="far fa-thumbs-up mr-1"></i> 点赞(8)
+                                        </button>
+                                        <button class="text-gray-500 hover:text-blue-600 text-sm flex items-center">
+                                            <i class="far fa-comment mr-1"></i> 回复
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 更多评论按钮 -->
+                            <div class="text-center">
+                                <button class="text-blue-600 hover:text-blue-800 font-medium">
+                                    查看更多评论 <i class="fas fa-chevron-down ml-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 右侧边栏 -->
+                <div class="lg:w-1/3 mt-6 lg:mt-0">
+                    <!-- 操作按钮 -->
+                    <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
+                        <div class="flex justify-between">
+                            <button class="flex flex-col items-center text-gray-600 hover:text-blue-600 w-1/4">
+                                <i class="far fa-thumbs-up text-2xl"></i>
+                                <span class="text-sm mt-1">点赞</span>
+                            </button>
+                            <button class="flex flex-col items-center text-gray-600 hover:text-blue-600 w-1/4">
+                                <i class="far fa-star text-2xl"></i>
+                                <span class="text-sm mt-1">收藏</span>
+                            </button>
+                            <button class="flex flex-col items-center text-gray-600 hover:text-blue-600 w-1/4">
+                                <i class="far fa-comment text-2xl"></i>
+                                <span class="text-sm mt-1">评论</span>
+                            </button>
+                            <button class="flex flex-col items-center text-gray-600 hover:text-blue-600 w-1/4">
+                                <i class="fas fa-share-alt text-2xl"></i>
+                                <span class="text-sm mt-1">分享</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- 案例信息 -->
+                    <div class="bg-white rounded-lg shadow-sm p-5 mb-6">
+                        <h3 class="font-bold text-lg mb-4">案例信息</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <span class="text-gray-600 w-24">所属产品:</span>
+                                <a href="#" class="text-blue-600 hover:underline">ChatGPT</a>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-gray-600 w-24">使用场景:</span>
+                                <span>内容创作</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-gray-600 w-24">解决问题:</span>
+                                <span>提升创作效率</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-gray-600 w-24">适用人群:</span>
+                                <span>内容创作者,营销人员</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-gray-600 w-24">发布时间:</span>
+                                <span>2023-10-15</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-gray-600 w-24">更新时间:</span>
+                                <span>2023-10-17</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 相关案例 -->
+                    <div class="bg-white rounded-lg shadow-sm p-5 mb-6">
+                        <h3 class="font-bold text-lg mb-4">相关案例</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <img src="https://placehold.co/80x80/eef/fff?text=AI" alt="相关案例" class="w-16 h-16 rounded object-cover">
+                                <div class="ml-3">
+                                    <h4 class="font-medium text-sm">ChatGPT在市场调研中的应用实践</h4>
+                                    <p class="text-gray-500 text-xs mt-1">如何利用ChatGPT快速收集和分析市场信息...</p>
+                                    <div class="flex items-center mt-1">
+                                        <img src="https://placehold.co/40x40/fce/fff?text=Z" alt="用户头像" class="w-4 h-4 rounded-full">
+                                        <span class="text-gray-500 text-xs ml-1">赵市场</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <img src="https://placehold.co/80x80/eef/fff?text=AI" alt="相关案例" class="w-16 h-16 rounded object-cover">
+                                <div class="ml-3">
+                                    <h4 class="font-medium text-sm">内容创作者如何利用AI工具构建个人品牌</h4>
+                                    <p class="text-gray-500 text-xs mt-1">结合多种AI工具打造个人品牌内容的全流程...</p>
+                                    <div class="flex items-center mt-1">
+                                        <img src="https://placehold.co/40x40/cef/fff?text=L" alt="用户头像" class="w-4 h-4 rounded-full">
+                                        <span class="text-gray-500 text-xs ml-1">刘品牌</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <img src="https://placehold.co/80x80/eef/fff?text=AI" alt="相关案例" class="w-16 h-16 rounded object-cover">
+                                <div class="ml-3">
+                                    <h4 class="font-medium text-sm">ChatGPT vs Claude：内容创作助手对比</h4>
+                                    <p class="text-gray-500 text-xs mt-1">两大AI对话模型在内容创作场景中的优劣分析...</p>
+                                    <div class="flex items-center mt-1">
+                                        <img src="https://placehold.co/40x40/dce/fff?text=S" alt="用户头像" class="w-4 h-4 rounded-full">
+                                        <span class="text-gray-500 text-xs ml-1">孙评测</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                查看更多相关案例 <i class="fas fa-angle-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- 热门标签 -->
+                    <div class="bg-white rounded-lg shadow-sm p-5">
+                        <h3 class="font-bold text-lg mb-4">热门标签</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">#ChatGPT</a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">#Midjourney</a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">#DALL-E</a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">#GitHub Copilot</a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">#AI写作</a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">#内容创作</a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">#效率提升</a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">#AI图像生成</a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">#AI编程</a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">#AI翻译</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-10 mt-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h2 class="text-xl font-bold mb-4">AI案例汇</h2>
+                    <p class="text-gray-400">发现、分享和讨论AI产品的最佳使用案例，连接AI爱好者与专业人士的社区。</p>
+                </div>
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h3 class="font-bold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="home.html" class="text-gray-400 hover:text-white">首页</a></li>
+                        <li><a href="category.html" class="text-gray-400 hover:text-white">案例分类</a></li>
+                        <li><a href="publish.html" class="text-gray-400 hover:text-white">发布案例</a></li>
+                        <li><a href="profile.html" class="text-gray-400 hover:text-white">个人中心</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h3 class="font-bold mb-4">关于我们</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">关于平台</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">使用条款</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">隐私政策</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4">
+                    <h3 class="font-bold mb-4">关注我们</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-weixin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-weibo"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-400">订阅获取最新AI案例和动态</p>
+                        <div class="flex mt-2">
+                            <input type="email" placeholder="请输入您的邮箱" class="px-3 py-2 bg-gray-700 text-white rounded-l focus:outline-none w-full">
+                            <button class="bg-blue-600 px-4 py-2 rounded-r hover:bg-blue-700">订阅</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>© 2023 AI案例汇. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

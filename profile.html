@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI案例汇 - 个人中心</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+        }
+        .tab-active {
+            color: #2563EB;
+            border-bottom: 2px solid #2563EB;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-xl font-bold text-blue-600">AI案例汇</h1>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="home.html" class="text-gray-600 hover:text-blue-600"><i class="fas fa-home mr-1"></i> 首页</a>
+                    <a href="category.html" class="text-gray-600 hover:text-blue-600"><i class="fas fa-th-large mr-1"></i> 分类</a>
+                    <a href="publish.html" class="text-gray-600 hover:text-blue-600"><i class="fas fa-plus-circle mr-1"></i> 发布</a>
+                    <a href="profile.html" class="text-blue-600 font-medium"><i class="fas fa-user mr-1"></i> 我的</a>
+                </div>
+                <div class="flex items-center">
+                    <div class="relative">
+                        <input type="text" placeholder="搜索AI产品或案例" class="bg-gray-100 rounded-full py-2 px-4 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500 w-64">
+                        <button class="absolute right-3 top-2 text-gray-500">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="flex items-center ml-4">
+                        <img src="https://placehold.co/40x40/ccd/fff?text=U" alt="用户头像" class="w-8 h-8 rounded-full">
+                        <span class="ml-2">张文思</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 个人信息头部 -->
+    <div class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/4 flex justify-center mb-6 md:mb-0">
+                    <img src="https://placehold.co/120x120/ccd/fff?text=U" alt="用户头像" class="w-28 h-28 rounded-full">
+                </div>
+                <div class="md:w-2/4 text-center md:text-left">
+                    <h1 class="text-2xl font-bold mb-2">张文思</h1>
+                    <p class="text-gray-600 mb-3">内容创作者 | 自由撰稿人 | AI探索者</p>
+                    <p class="text-gray-500 mb-4">专注于探索AI工具在内容创作和数字营销领域的应用，帮助创作者和营销人员提升工作效率和创作质量。</p>
+                    <div class="flex justify-center md:justify-start space-x-4 text-gray-500">
+                        <span><i class="fas fa-file-alt mr-1"></i> 12 案例</span>
+                        <span><i class="fas fa-users mr-1"></i> 245 关注者</span>
+                        <span><i class="fas fa-user-plus mr-1"></i> 56 关注</span>
+                        <span><i class="fas fa-star mr-1"></i> 98 收藏</span>
+                    </div>
+                </div>
+                <div class="md:w-1/4 flex justify-center md:justify-end mt-6 md:mt-0">
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full">
+                        <i class="fas fa-edit mr-1"></i> 编辑资料
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主要内容区 -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-col lg:flex-row">
+            <!-- 左侧导航 -->
+            <div class="lg:w-1/4 mb-6 lg:mb-0 lg:pr-6">
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="p-4 border-b">
+                        <h3 class="font-bold">个人中心</h3>
+                    </div>
+                    <nav class="p-2">
+                        <a href="#" class="flex items-center p-3 text-blue-600 bg-blue-50 rounded-lg">
+                            <i class="fas fa-file-alt w-5 text-center"></i>
+                            <span class="ml-3">我的案例</span>
+                        </a>
+                        <a href="#" class="flex items-center p-3 text-gray-700 hover:bg-gray-50 rounded-lg">
+                            <i class="fas fa-star w-5 text-center"></i>
+                            <span class="ml-3">我的收藏</span>
+                        </a>
+                        <a href="#" class="flex items-center p-3 text-gray-700 hover:bg-gray-50 rounded-lg">
+                            <i class="fas fa-thumbs-up w-5 text-center"></i>
+                            <span class="ml-3">我的点赞</span>
+                        </a>
+                        <a href="#" class="flex items-center p-3 text-gray-700 hover:bg-gray-50 rounded-lg">
+                            <i class="fas fa-comment w-5 text-center"></i>
+                            <span class="ml-3">我的评论</span>
+                        </a>
+                        <a href="#" class="flex items-center p-3 text-gray-700 hover:bg-gray-50 rounded-lg">
+                            <i class="fas fa-users w-5 text-center"></i>
+                            <span class="ml-3">我的关注</span>
+                        </a>
+                        <a href="#" class="flex items-center p-3 text-gray-700 hover:bg-gray-50 rounded-lg">
+                            <i class="fas fa-bell w-5 text-center"></i>
+                            <span class="ml-3">消息通知</span>
+                            <span class="ml-auto bg-red-500 text-white text-xs px-2 py-1 rounded-full">3</span>
+                        </a>
+                    </nav>
+                    <div class="p-4 border-t">
+                        <h3 class="font-bold mb-3">账号设置</h3>
+                        <nav>
+                            <a href="#" class="flex items-center p-3 text-gray-700 hover:bg-gray-50 rounded-lg">
+                                <i class="fas fa-user-cog w-5 text-center"></i>
+                                <span class="ml-3">个人资料</span>
+                            </a>
+                            <a href="#" class="flex items-center p-3 text-gray-700 hover:bg-gray-50 rounded-lg">
+                                <i class="fas fa-lock w-5 text-center"></i>
+                                <span class="ml-3">账号安全</span>
+                            </a>
+                            <a href="#" class="flex items-center p-3 text-gray-700 hover:bg-gray-50 rounded-lg">
+                                <i class="fas fa-sign-out-alt w-5 text-center"></i>
+                                <span class="ml-3">退出登录</span>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 右侧内容 -->
+            <div class="lg:w-3/4">
+                <div class="bg-white rounded-lg shadow-sm mb-6">
+                    <div class="border-b">
+                        <div class="flex overflow-x-auto">
+                            <button class="px-6 py-4 font-medium text-center tab-active whitespace-nowrap">已发布 (12)</button>
+                            <button class="px-6 py-4 font-medium text-center text-gray-600 whitespace-nowrap">草稿箱 (3)</button>
+                            <button class="px-6 py-4 font-medium text-center text-gray-600 whitespace-nowrap">审核中 (1)</button>
+                        </div>
+                    </div>
+                    
+                    <!-- 工具栏 -->
+                    <div class="flex justify-between items-center p-4 border-b">
+                        <div class="flex space-x-2">
+                            <select class="border border-gray-300 rounded px-3 py-1 text-sm">
+                                <option>所有分类</option>
+                                <option>AI聊天机器人</option>
+                                <option>AI图像生成</option>
+                                <option>AI编程助手</option>
+                                <option>AI写作工具</option>
+                            </select>
+                            <select class="border border-gray-300 rounded px-3 py-1 text-sm">
+                                <option>最新发布</option>
+                                <option>最多浏览</option>
+                                <option>最多点赞</option>
+                                <option>最多评论</option>
+                            </select>
+                        </div>
+                        <div class="flex">
+                            <input type="text" placeholder="搜索我的案例" class="border border-gray-300 rounded-l px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <button class="bg-blue-600 text-white px-3 py-1 rounded-r text-sm hover:bg-blue-700">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- 案例列表 -->
+                    <div class="p-4">
+                        <div class="space-y-4">
+                            <!-- 案例1 -->
+                            <div class="border rounded-lg overflow-hidden flex flex-col md:flex-row">
+                                <div class="md:w-1/4 h-48 md:h-auto">
+                                    <img src="https://placehold.co/600x300/eef/fff?text=ChatGPT案例" alt="案例封面" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 md:w-3/4 flex flex-col">
+                                    <div class="flex-grow">
+                                        <div class="flex items-center mb-2">
+                                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">AI聊天机器人</span>
+                                            <span class="ml-2 text-gray-500 text-sm">2023-10-15</span>
+                                            <span class="ml-auto text-green-600 text-sm">已发布</span>
+                                        </div>
+                                        <h3 class="font-bold text-lg mb-2">如何使用ChatGPT提升内容创作效率</h3>
+                                        <p class="text-gray-600 text-sm mb-3 line-clamp-2">本案例详细介绍了如何利用ChatGPT进行头脑风暴、内容优化和多语言翻译，提高内容创作效率30%以上...</p>
+                                        <div class="flex items-center text-gray-500 text-sm">
+                                            <span class="mr-3"><i class="far fa-eye mr-1"></i> 1,246</span>
+                                            <span class="mr-3"><i class="far fa-thumbs-up mr-1"></i> 89</span>
+                                            <span class="mr-3"><i class="far fa-comment mr-1"></i> 16</span>
+                                            <span><i class="far fa-star mr-1"></i> 24</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-end mt-3 space-x-2">
+                                        <a href="detail.html" class="px-3 py-1 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 text-sm">
+                                            <i class="far fa-eye mr-1"></i> 查看
+                                        </a>
+                                        <a href="publish.html" class="px-3 py-1 bg-blue-50 text-blue-600 rounded hover:bg-blue-100 text-sm">
+                                            <i class="far fa-edit mr-1"></i> 编辑
+                                        </a>
+                                        <button class="px-3 py-1 bg-red-50 text-red-600 rounded hover:bg-red-100 text-sm">
+                                            <i class="far fa-trash-alt mr-1"></i> 删除
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 案例2 -->
+                            <div class="border rounded-lg overflow-hidden flex flex-col md:flex-row">
+                                <div class="md:w-1/4 h-48 md:h-auto">
+                                    <img src="https://placehold.co/600x300/fee/fff?text=Claude案例" alt="案例封面" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 md:w-3/4 flex flex-col">
+                                    <div class="flex-grow">
+                                        <div class="flex items-center mb-2">
+                                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">AI聊天机器人</span>
+                                            <span class="ml-2 text-gray-500 text-sm">2023-10-08</span>
+                                            <span class="ml-auto text-green-600 text-sm">已发布</span>
+                                        </div>
+                                        <h3 class="font-bold text-lg mb-2">Claude AI在课程设计与教学辅助中的应用</h3>
+                                        <p class="text-gray-600 text-sm mb-3 line-clamp-2">作为教育工作者，我如何利用Claude AI改进课程设计，创建个性化学习材料并提供即时反馈...</p>
+                                        <div class="flex items-center text-gray-500 text-sm">
+                                            <span class="mr-3"><i class="far fa-eye mr-1"></i> 2,120</span>
+                                            <span class="mr-3"><i class="far fa-thumbs-up mr-1"></i> 156</span>
+                                            <span class="mr-3"><i class="far fa-comment mr-1"></i> 42</span>
+                                            <span><i class="far fa-star mr-1"></i> 38</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-end mt-3 space-x-2">
+                                        <a href="detail.html" class="px-3 py-1 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 text-sm">
+                                            <i class="far fa-eye mr-1"></i> 查看
+                                        </a>
+                                        <a href="publish.html" class="px-3 py-1 bg-blue-50 text-blue-600 rounded hover:bg-blue-100 text-sm">
+                                            <i class="far fa-edit mr-1"></i> 编辑
+                                        </a>
+                                        <button class="px-3 py-1 bg-red-50 text-red-600 rounded hover:bg-red-100 text-sm">
+                                            <i class="far fa-trash-alt mr-1"></i> 删除
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 案例3 -->
+                            <div class="border rounded-lg overflow-hidden flex flex-col md:flex-row">
+                                <div class="md:w-1/4 h-48 md:h-auto">
+                                    <img src="https://placehold.co/600x300/efe/fff?text=Jasper案例" alt="案例封面" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 md:w-3/4 flex flex-col">
+                                    <div class="flex-grow">
+                                        <div class="flex items-center mb-2">
+                                            <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">AI写作工具</span>
+                                            <span class="ml-2 text-gray-500 text-sm">2023-09-25</span>
+                                            <span class="ml-auto text-green-600 text-sm">已发布</span>
+                                        </div>
+                                        <h3 class="font-bold text-lg mb-2">使用Jasper AI提升营销文案效果的实战经验</h3>
+                                        <p class="text-gray-600 text-sm mb-3 line-clamp-2">我们的营销团队如何通过Jasper AI优化各种营销渠道的文案，实现转化率提升35%的完整案例...</p>
+                                        <div class="flex items-center text-gray-500 text-sm">
+                                            <span class="mr-3"><i class="far fa-eye mr-1"></i> 1,890</span>
+                                            <span class="mr-3"><i class="far fa-thumbs-up mr-1"></i> 112</span>
+                                            <span class="mr-3"><i class="far fa-comment mr-1"></i> 24</span>
+                                            <span><i class="far fa-star mr-1"></i> 31</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-end mt-3 space-x-2">
+                                        <a href="detail.html" class="px-3 py-1 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 text-sm">
+                                            <i class="far fa-eye mr-1"></i> 查看
+                                        </a>
+                                        <a href="publish.html" class="px-3 py-1 bg-blue-50 text-blue-600 rounded hover:bg-blue-100 text-sm">
+                                            <i class="far fa-edit mr-1"></i> 编辑
+                                        </a>
+                                        <button class="px-3 py-1 bg-red-50 text-red-600 rounded hover:bg-red-100 text-sm">
+                                            <i class="far fa-trash-alt mr-1"></i> 删除
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 分页 -->
+                        <div class="flex justify-center mt-8">
+                            <nav class="inline-flex rounded-md shadow">
+                                <a href="#" class="py-2 px-4 bg-white border border-gray-300 text-gray-500 hover:bg-gray-50 rounded-l-md">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <a href="#" class="py-2 px-4 bg-blue-600 text-white border border-blue-600">1</a>
+                                <a href="#" class="py-2 px-4 bg-white border border-gray-300 text-gray-500 hover:bg-gray-50">2</a>
+                                <a href="#" class="py-2 px-4 bg-white border border-gray-300 text-gray-500 hover:bg-gray-50">3</a>
+                                <a href="#" class="py-2 px-4 bg-white border border-gray-300 text-gray-500 hover:bg-gray-50">4</a>
+                                <a href="#" class="py-2 px-4 bg-white border border-gray-300 text-gray-500 hover:bg-gray-50 rounded-r-md">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 数据统计 -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="font-bold text-lg mb-4">数据统计</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-blue-50 rounded-lg p-4 text-center">
+                            <div class="text-3xl font-bold text-blue-600 mb-1">1,246</div>
+                            <div class="text-sm text-gray-600">今日浏览量</div>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-4 text-center">
+                            <div class="text-3xl font-bold text-green-600 mb-1">8,972</div>
+                            <div class="text-sm text-gray-600">总浏览量</div>
+                        </div>
+                        <div class="bg-yellow-50 rounded-lg p-4 text-center">
+                            <div class="text-3xl font-bold text-yellow-600 mb-1">384</div>
+                            <div class="text-sm text-gray-600">获赞总数</div>
+                        </div>
+                        <div class="bg-purple-50 rounded-lg p-4 text-center">
+                            <div class="text-3xl font-bold text-purple-600 mb-1">245</div>
+                            <div class="text-sm text-gray-600">关注人数</div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h4 class="font-medium mb-3">热门案例</h4>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <div class="text-lg font-bold text-blue-600 w-6 text-center">1</div>
+                                    <div class="ml-4 flex-grow">
+                                        <h5 class="font-medium">如何使用ChatGPT提升内容创作效率</h5>
+                                        <div class="flex items-center text-gray-500 text-sm mt-1">
+                                            <span class="mr-3"><i class="far fa-eye mr-1"></i> 1,246</span>
+                                            <span class="mr-3"><i class="far fa-thumbs-up mr-1"></i> 89</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="text-lg font-bold text-gray-500 w-6 text-center">2</div>
+                                    <div class="ml-4 flex-grow">
+                                        <h5 class="font-medium">Claude AI在课程设计与教学辅助中的应用</h5>
+                                        <div class="flex items-center text-gray-500 text-sm mt-1">
+                                            <span class="mr-3"><i class="far fa-eye mr-1"></i> 2,120</span>
+                                            <span class="mr-3"><i class="far fa-thumbs-up mr-1"></i> 156</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="text-lg font-bold text-gray-500 w-6 text-center">3</div>
+                                    <div class="ml-4 flex-grow">
+                                        <h5 class="font-medium">使用Jasper AI提升营销文案效果的实战经验</h5>
+                                        <div class="flex items-center text-gray-500 text-sm mt-1">
+                                            <span class="mr-3"><i class="far fa-eye mr-1"></i> 1,890</span>
+                                            <span class="mr-3"><i class="far fa-thumbs-up mr-1"></i> 112</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-10 mt-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h2 class="text-xl font-bold mb-4">AI案例汇</h2>
+                    <p class="text-gray-400">发现、分享和讨论AI产品的最佳使用案例，连接AI爱好者与专业人士的社区。</p>
+                </div>
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h3 class="font-bold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="home.html" class="text-gray-400 hover:text-white">首页</a></li>
+                        <li><a href="category.html" class="text-gray-400 hover:text-white">案例分类</a></li>
+                        <li><a href="publish.html" class="text-gray-400 hover:text-white">发布案例</a></li>
+                        <li><a href="profile.html" class="text-gray-400 hover:text-white">个人中心</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h3 class="font-bold mb-4">关于我们</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">关于平台</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">使用条款</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">隐私政策</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4">
+                    <h3 class="font-bold mb-4">关注我们</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-weixin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-weibo"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-400">订阅获取最新AI案例和动态</p>
+                        <div class="flex mt-2">
+                            <input type="email" placeholder="请输入您的邮箱" class="px-3 py-2 bg-gray-700 text-white rounded-l focus:outline-none w-full">
+                            <button class="bg-blue-600 px-4 py-2 rounded-r hover:bg-blue-700">订阅</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>© 2023 AI案例汇. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
